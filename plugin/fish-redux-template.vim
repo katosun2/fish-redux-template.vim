@@ -3,7 +3,7 @@
 "         Desc: 
 "       Author: Ryu
 "      Version: 0.1.0
-"   LastChange: 2021-07-13 09:20:55
+"   LastChange: 2021-07-13 09:27:59
 "=============================================================================
 if exists("b:loaded_fishReduxTemplate")
   finish
@@ -64,6 +64,6 @@ func! g:GenerateAdapter(name, fishType)
 endfunc
 
 " 定义命令
-command! -nargs=* FishGeneratePage :call g:GeneratePage(<f-args>, 'page')
-command! -nargs=* FishGenerateComponent :call g:GeneratePage(<f-args>, 'component')
+command! -nargs=* FishGeneratePage :call g:GeneratePage(<f-args>, 'page', 0)
+command! -nargs=* FishGenerateComponent :call g:GeneratePage(<f-args>, 'component', 0)
 command! -nargs=* FishGenerateAdapter :call g:GenerateAdapter(<f-args>)
