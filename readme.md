@@ -7,7 +7,7 @@ git clone https://github.com/kokohuang/fish-redux-template
 
 ## 安装
 
-## 配置配置
+## 配置模板路径
 ```
 // 添加模板路径配置
 let g:fish_redux_templates_path='fish-redux-template/templates/'
