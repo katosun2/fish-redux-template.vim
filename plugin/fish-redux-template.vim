@@ -2,7 +2,7 @@
 "     FileName: fish-redux-template.vim
 "         Desc: 
 "       Author: Ryu
-"      Version: 0.1.0
+"      Version: 0.1.1
 "   LastChange: 2021-07-13 09:27:59
 "=============================================================================
 if exists("b:loaded_fishReduxTemplate")
@@ -54,7 +54,7 @@ func! g:GeneratePage(name, fishType, isAdapter)
     if writefile(lineList, targetFile)
       echoerr '文件写入失败!'
     else
-      echo '生成 '.a:name.' 成功'
+      echo '生成 '.fileName.' 成功'
     endif
   endfor
 endfunc
