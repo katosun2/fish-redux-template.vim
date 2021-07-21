@@ -15,6 +15,17 @@ if !exists('g:fish_redux_templates_path')
   let g:fish_redux_templates_path=$VIM.'/vimfiles/fish-redux-template.vim/templates/'
 endif
 
+"驼峰转成小写下划线
+"https://github.com/tpope/vim-abolish/blob/master/plugin/abolish.vim
+function! s:snakecase(word)
+  let word = substitute(a:word,'::','/','g')
+  let word = substitute(word,'\(\u\+\)\(\u\l\)','\1_\2','g')
+  let word = substitute(word,'\(\l\|\d\)\(\u\)','\1_\2','g')
+  let word = substitute(word,'[.-]','_','g')
+  let word = tolower(word)
+  return word
+endfunction
+
 func! g:GeneratePage(name, fishType, isAdapter)
   "编辑中的文件所在工程目录
   let path = fnameescape(expand("%:p:h"))
@@ -27,7 +38,8 @@ func! g:GeneratePage(name, fishType, isAdapter)
 
   "读取目录下的模板dart
   let tplDartFiles = split(globpath(l:tplPath, '*.dart'), '\n')
-  let pagePath = path.'/'.a:name
+  let snakecase = s:snakecase(a:name)
+  let pagePath = path.'/'.snakecase
 
   "创建页面目录
   if !isdirectory(pagePath)

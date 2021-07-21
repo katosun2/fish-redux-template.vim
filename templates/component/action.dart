@@ -5,6 +5,6 @@ enum $nameAction { action }
 
 class $nameActionCreator {
   static Action onAction() {
-    return const Action($nameAction.action);
+    return const Action($nameAction.action, payload: null);
   }
 }
