@@ -1,9 +1,9 @@
 "=============================================================================
 "     FileName: fish-redux-template.vim
-"         Desc: 
-"       Author: Ryu
+"         Desc: fish-redux-template 模板生成插件 For Vim
+"       Author: https://github.com/katosun2/fish-redux-template.vim
 "      Version: 0.1.1
-"   LastChange: 2021-07-13 09:27:59
+"   LastChange: 2021-07-13 09:38:07
 "=============================================================================
 if exists("b:loaded_fishReduxTemplate")
   finish

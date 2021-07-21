@@ -1,4 +1,4 @@
-## fish-redux-template 模板生成插件
+## fish-redux-template 模板生成插件 For Vim
 
 ## 下载模板
 ```
